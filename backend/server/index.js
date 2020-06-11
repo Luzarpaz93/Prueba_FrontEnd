@@ -8,7 +8,7 @@ server.use(express.json());
 //endpoints
 server.get('/', (req, res) => res.status(201).send('Hello World')) //todo bien
 
-server.use(require('../router'));
+server.use('/home',require('../router'));
 //exportar app 
 module.exports = {server, PORT}; 
 
