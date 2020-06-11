@@ -16,7 +16,15 @@ router.post('/crear', UsersController.create);
 router.get('/lista', UsersController.find);
 
 //get one
-router.get('/users/:codigo', UsersController.findByCodigo);
+router.get('/editar/:id', UsersController.findById);
+
+//modificar
+router.patch('/editar/:id', UsersController.findByIdAndModificar);
+
+//borrado lógico
+router.delete('/editar/:id', UsersController.findByIdAndDelete);
+
+
 
 
 module.exports = router;
